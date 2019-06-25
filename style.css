@@ -1,0 +1,34 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+    color: #333;
+    min-height: 100%;
+}
+
+#gravity-canvas {
+    display: block;
+    margin: 40px auto;
+    padding: 5px;
+    border: 5px outset navy;
+    box-shadow: 0 0 5px cyan;
+    background-color: magenta;
+}
+
+.footer {
+    text-align: center;
+}
+
+.footer a {
+    color: #33f;
+    text-decoration: none;
+    border-bottom: 1px solid #33f;
+    transition: border-bottom-width ease-in 0.1s;
+}
+
+.footer a:hover, .footer a:focus {
+    border-bottom-width: 3px;
+}

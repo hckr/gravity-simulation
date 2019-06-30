@@ -8,8 +8,8 @@ const centerX = (canvas.width / 2) || 0;
 const centerY = (canvas.height / 2) || 0;
 
 const planets = [
-    new Planet(25, new PVector(-100, -100), new PVector(-0.5, 0.5), 'rgb(245, 35, 129, 200)'),
-    new Planet(25, new PVector(100, 100), new PVector(0.5, -0.5), 'rgb(40, 237, 70, 200)')
+    new Planet(50, new PVector(-50, -50), new PVector(-0.5, 0.5), 'rgba(245, 35, 129, 0.8)'),
+    new Planet(50, new PVector(50, 50), new PVector(0.5, -0.5), 'rgba(40, 237, 70, 0.8)')
 ];
 
 let updateCounter = 0;
@@ -42,11 +42,11 @@ const draw = () => {
     ctx.translate(centerX, centerY);
 
     for (const p of planets){
-        p.draw(ctx);
+        p.drawTrace(ctx);
     }
 
     for (const p of planets){
-        p.drawTrace(ctx);
+        p.draw(ctx);
     }
 
     ctx.restore();

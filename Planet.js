@@ -1,6 +1,6 @@
 import { PVector } from './PVector.js'
 
-const G = 10;
+const G = 2;
 
 export class Planet {
     constructor(mass, position, velocity, color) {
@@ -37,7 +37,7 @@ export class Planet {
         ctx.save();
         ctx.fillStyle = this.color;
         ctx.beginPath();
-        ctx.arc(this.position.x, this.position.y, this.mass, 0, 2 * Math.PI);
+        ctx.arc(this.position.x, this.position.y, (this.mass / 2) | 0, 0, 2 * Math.PI);
         ctx.closePath();
         ctx.fill();
         ctx.restore();
